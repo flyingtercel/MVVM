@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Mvvm02</string>
+    <string name="sure_name">我是资源文件中的数据</string>
+    <array name="strs">
+        <item>我是item一</item>
+        <item>我是item二</item>
+        <item>我是item三</item>
+        <item>我是item四</item>
+    </array>
+</resources>

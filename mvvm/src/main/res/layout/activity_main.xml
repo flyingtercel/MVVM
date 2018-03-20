@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="us.mifeng.mvvm02.modle.User" />
+
+        <import type="android.databinding.ObservableMap" />
+
+        <variable
+            name="map"
+            type="ObservableMap" />
+
+        <import type="android.databinding.ObservableField" />
+
+        <import type="android.databinding.ObservableList" />
+
+        <variable
+            name="list"
+            type="android.databinding.ObservableList" />
+
+        <import type="int" />
+        <variable
+            name="num"
+            type="int" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.name +user.age+user.flag}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{map[&quot;sss&quot;]??user.name}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{list[num]?? &quot;sss&quot;}"/>
+        <!--加载资源下面的数据-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text='@{@string/sure_name}'/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text='@{@stringArray/strs[0]}'/>
+    </LinearLayout>
+
+</layout>
